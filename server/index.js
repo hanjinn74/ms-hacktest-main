@@ -57,6 +57,12 @@ app.post('/api/chat', async (req, res) => {
 
 /** 헬스체크 */
 app.get('/healthz', (req, res) => res.json({ ok: true }));
+// 핸들러
+app.get('/', (req, res) => {
+  res.send('Hello from backend!');
+});
+
+
 
 /** 서버 기동 */
 app.listen(port, async () => {
